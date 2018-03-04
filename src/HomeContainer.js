@@ -15,9 +15,9 @@ class HomeContainer extends React.Component {
 	}
 
 	onClickAdmin = () => {
-		this.props.history.replace({
-		  path: '/internal'
-		})
+		// this.props.history.replace({
+		//   path: '/internal'
+		// })
 
 	}
 
@@ -51,7 +51,7 @@ class HomeContainer extends React.Component {
 	}
 
 	render() {
-		return(<Home {...this.state} onCloseModal={this.onCloseModal} onChangeCPF={this.onChangeCPF} onSubmitCPF={this.onSubmitCPF} onClickAdmin={this.onClickAdmin}/>)
+		return(<Home {...this.state} onCloseModal={this.onCloseModal} onChangeCPF={this.onChangeCPF} onSubmitCPF={this.onSubmitCPF}/>)
 	}
 }
 
