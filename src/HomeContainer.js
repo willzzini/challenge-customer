@@ -24,17 +24,18 @@ class HomeContainer extends React.Component {
 	onSubmitCPF = (value) => {
 		const cpf = this.state.cpf;
 		const self = this;
-		fetch(`http://localhost:4000/customer/${cpf}`, {'mode': 'no-cors'})
+		fetch(`http://localhost:4000/customer/${cpf}`, 
+			{'Content-Type': 'application/json'})
 			.then((response) => {
-				if (response.status === '200') {
+				if (response.status === 200) {
 					console.log(response);
-					response.json();
+					return response.json()
 				}
 				 if (response.status >= 400) {
 				      throw new Error("Bad response from server");
 				    }
 			}).then((data) => {
-				self.setState({ success: data.success, showDialog: true })
+				self.setState({ success: data.customer_defaulter, showDialog: true })
 			}).catch((err) => {
 				console.log(err);
 				self.setState({ showDialog: true })
