@@ -10,6 +10,7 @@ class HomeContainer extends React.Component {
 			usuario: '',
 			senha: '',
 			success: false,
+			disabled: true,
 			showDialog: false
 		}
 	}
@@ -46,7 +47,7 @@ class HomeContainer extends React.Component {
 	}
 	onChangeCPF = (e) => {
 		const valor = e.target.value;
-		this.setState({ 
+		this.setState({disabled: valor.length === 0,
 			cpf: valor
 		})
 	}
