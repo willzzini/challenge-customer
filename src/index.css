@@ -11,4 +11,7 @@ body {
 	display: flex;
 	align-items: center
 }
-
+.message {
+	padding: 20px;
+	font-size: 1.4em;
+}
