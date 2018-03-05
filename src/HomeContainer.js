@@ -24,7 +24,7 @@ class HomeContainer extends React.Component {
 	onSubmitCPF = (value) => {
 		const cpf = this.state.cpf;
 		const self = this;
-		fetch(`http://localhost:5000/customer/${cpf}`, {'mode': 'no-cors'})
+		fetch(`http://localhost:4000/customer/${cpf}`, {'mode': 'no-cors'})
 			.then((response) => {
 				if (response.status === '200') {
 					console.log(response);

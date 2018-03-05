@@ -12,7 +12,7 @@ const Home = (props) => {
 		</div>
 		) : (
 		<div>
-		Temos um caloteiro aqui!
+		Você tem restrições no seu nome!
 		</div>
 		)}
 		</Dialog>
